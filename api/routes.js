@@ -6,5 +6,5 @@
 'use strict';
 
 exports.welcomeAPI = (req, res) => {
-    res.json({ message: 'Node-Jenkins Integration Test!' });
+    res.json({ message: 'Node-Jenkins SSH Test!' });
 }
