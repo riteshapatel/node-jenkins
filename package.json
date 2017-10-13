@@ -1,0 +1,36 @@
+{
+  "name": "node-jenkins",
+  "version": "1.0.0",
+  "description": "Jenkins CI/CD integration for Express API",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riteshapatel/node-jenkins.git"
+  },
+  "keywords": [
+    "Node",
+    "ExpressJs",
+    "Jenkins",
+    "Continuous",
+    "Integration"
+  ],
+  "author": "ritesh.patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riteshapatel/node-jenkins/issues"
+  },
+  "homepage": "https://github.com/riteshapatel/node-jenkins#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "nodemon": "^1.12.1",
+    "should": "^13.1.2",
+    "supertest": "^3.0.0"
+  }
+}
