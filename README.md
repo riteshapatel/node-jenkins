@@ -9,7 +9,7 @@ This guide lists steps required for CI / CD integration with Jenkins
 ## Make Git & Jenkins talk to each other
 
 1. Create a GitHub Repository (private or public)
-2. Install Jenkins
+2. Install Jenkins in the cloud
 
 ###### Jenkins Server Configuration
 3. Create ssh key on Jenkins Server
