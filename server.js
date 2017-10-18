@@ -25,7 +25,7 @@ app.use(bodyParser.json());
 //error handlers
 app.use(function(err, req, res, next){
 	res.status(res.status || 500);
-	res.render('Recipe API Error', {
+	res.render('AWS Rest API Error', {
 		message:err.message,
 		error:err.stack
 	});
