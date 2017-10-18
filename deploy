@@ -2,5 +2,5 @@
 npm install --production
 killall node
 sleep 10s
-daemonize BUILD_ID=dontKillMe node server.js &
+BUILD_ID=dontKillMe node server.js &
 exit
