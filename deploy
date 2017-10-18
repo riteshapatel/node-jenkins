@@ -1,0 +1,9 @@
+#!/bin/sh
+cd ~/code/node-jenkins
+git pull
+npm install --production
+kilall node
+sleep 10s
+node server.js &
+sleep 10s
+exit
