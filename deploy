@@ -2,7 +2,7 @@
 cd /var/lib/jenkins/workspace/node-jenkins
 git pull
 npm install --production
-kilall node
+killall node
 sleep 10s
 node server.js &
 sleep 10s
