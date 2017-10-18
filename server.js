@@ -35,7 +35,7 @@ var router = express.Router();
 
 router.get('/', routes.welcomeAPI);
 app.use('/', router);
-app.use('/ec2/instances', ec2.getInstances);
+app.use('/instances', ec2.getInstances);
 
 //create server & listen on port 3000
 http.createServer(app).listen(app.get('port'), function(){
