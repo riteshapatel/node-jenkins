@@ -9,6 +9,7 @@ var express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
     ec2 = require('./api/ec2'),
+    iam = require('./api/iam'),
     routes = require('./api/routes'),
     server,
     serverPort = 3000;
@@ -36,6 +37,7 @@ var router = express.Router();
 router.get('/', routes.welcomeAPI);
 app.use('/', router);
 app.use('/instances', ec2.getInstances);
+app.use('/users', iam.listUsers);
 
 //create server & listen on port 3000
 http.createServer(app).listen(app.get('port'), function(){
