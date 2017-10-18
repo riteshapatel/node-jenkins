@@ -1,5 +1,5 @@
 #!/bin/sh
-npm install --production
+sudo npm install --production
 killall node
 sleep 10s
 BUILD_ID=dontKillMe node server.js &
