@@ -8,6 +8,8 @@ var express = require('express'),
     http = require('http'),
     path = require('path'),
     bodyParser = require('body-parser'),
+    ec2 = require('./api/ec2'),
+    routes = require('./api/routes'),
     server,
     serverPort = 3000;
 
@@ -30,10 +32,10 @@ app.use(function(err, req, res, next){
 
 // launch configuration router
 var router = express.Router();
-var routes = require('./api/routes');
 
 router.get('/', routes.welcomeAPI);
 app.use('/', router);
+app.use('/ec2/instances', ec2.getInstances);
 
 //create server & listen on port 3000
 http.createServer(app).listen(app.get('port'), function(){
