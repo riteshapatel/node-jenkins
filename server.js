@@ -41,7 +41,7 @@ app.use('/', router);
 app.use('/instances', ec2.getInstances);
 
 // iam routes
-// app.use('/users', iam.listUsers);
+app.use('/users', iam.listUsers);
 
 //create server & listen on port 3000
 http.createServer(app).listen(app.get('port'), function(){
