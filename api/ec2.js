@@ -8,8 +8,7 @@
 let AWS = require('aws-sdk'),
     ec2;
 
-AWS.config.update({ region: 'us-east-1' });
-
+ec2 = new AWS.EC2({ region: 'us-east-1' });
 const getInstances = (req, res) => {
     ec2.describeInstances((err, data) => {
         if (err) {
