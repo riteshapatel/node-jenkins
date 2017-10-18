@@ -6,9 +6,11 @@
 'use strict';
 
 let AWS = require('aws-sdk'),
+    _ = require('lodash'),
     ec2;
 
 ec2 = new AWS.EC2({ accessKeyId: process.env.AWS_ACCESS_KEY_ID, secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY, region: 'us-east-1' });
+console.log('id ', process.env.AWS_ACCESS_KEY_ID);
 const getInstances = (req, res) => {
     ec2.describeInstances((err, data) => {
         if (err) {
