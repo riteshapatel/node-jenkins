@@ -3,5 +3,4 @@ npm install --production
 killall node
 sleep 10s
 node server.js &
-sleep 10s
 exit
