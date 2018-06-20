@@ -13,7 +13,7 @@ pipeline {
             }
 
             steps {
-                docker.withRegistry('https://hub.docker.com', 'docker-hub-credentials') {
+                docker.withDockerRegistry('https://hub.docker.com', 'docker-hub-credentials') {
                     docker.image('node-jenkins-api').push('latest');
                 }
             }
