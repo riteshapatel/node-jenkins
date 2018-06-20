@@ -10,7 +10,7 @@ pipeline {
         stage('Publish') {
             steps {
                 script {
-                    withDockerRegistry([url: 'https://hub.docker.com', credentialsId: 'docker-hub-credentials']) {
+                    withDockerRegistry([credentialsId: 'docker-hub-credentials', url: 'https://hub.docker.com']) {
                         sh 'docker push node-jenkins-api:latest'
                     }
                 }
