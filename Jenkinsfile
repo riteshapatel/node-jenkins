@@ -10,7 +10,7 @@ pipeline {
         stage('Publish') {
             steps {
                 script {
-                    withDockerRegistry([url: 'https://hub.docker.com', credentials: 'docker-hub-credentials']) {
+                    withDockerRegistry([url: 'https://hub.docker.com', credentialsId: 'docker-hub-credentials']) {
                         docker.image('node-jenkins-api').push('latest');
                     }
                 }
