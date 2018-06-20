@@ -7,10 +7,14 @@ pipeline {
             }
         }
 
-        stage('Push image') {
+        stage('Publish') {
+            when {
+                branch 'master'
+            }
+
             steps {
                 docker.withRegistry('https://hub.docker.com', 'docker-hub-credentials') {
-                    app.push('latest');
+                    docker.image('node-jenkins-api').push('latest');
                 }
             }
         }
