@@ -8,10 +8,6 @@ pipeline {
         }
 
         stage('Publish') {
-            when {
-                branch 'master'
-            }
-
             steps {
                 script {
                     docker.withDockerRegistry('https://hub.docker.com', 'docker-hub-credentials') {
