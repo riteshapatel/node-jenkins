@@ -13,8 +13,10 @@ pipeline {
             }
 
             steps {
-                docker.withDockerRegistry('https://hub.docker.com', 'docker-hub-credentials') {
-                    docker.image('node-jenkins-api').push('latest');
+                script {
+                    docker.withDockerRegistry('https://hub.docker.com', 'docker-hub-credentials') {
+                        docker.image('node-jenkins-api').push('latest');
+                    }
                 }
             }
         }
