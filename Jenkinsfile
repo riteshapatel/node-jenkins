@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry([url: 'https://hub.docker.com', credentialsId: 'docker-hub-credentials']) {
-                        docker.image('node-jenkins-api').push('latest');
+                        sh 'docker push node-jenkins-api:latest'
                     }
                 }
             }
