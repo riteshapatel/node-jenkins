@@ -6,5 +6,11 @@ pipeline {
                 sh 'node --version'
             }
         }
+
+        stage('Push image') {
+            docker.withRegistry('https://hub.docker.com', 'docker-hub-credentials') {
+                app.push('latest');
+            }
+        }
     }
 }
