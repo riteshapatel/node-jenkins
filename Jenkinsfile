@@ -8,8 +8,10 @@ pipeline {
         }
 
         stage('Push image') {
-            docker.withRegistry('https://hub.docker.com', 'docker-hub-credentials') {
-                app.push('latest');
+            steps {
+                docker.withRegistry('https://hub.docker.com', 'docker-hub-credentials') {
+                    app.push('latest');
+                }
             }
         }
     }
