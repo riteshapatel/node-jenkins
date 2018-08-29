@@ -38,7 +38,7 @@ router.get('/', routes.welcomeAPI);
 app.use('/', router);
 
 // ec2 routes
-app.use('/instances', ec2.getInstances);
+//app.use('/instances', ec2.getInstances);
 
 // iam routes
 app.use('/users', iam.listUsers);
