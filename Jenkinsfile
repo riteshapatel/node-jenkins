@@ -24,7 +24,7 @@ pipeline {
                         sh 'ssh -o StrictHostKeyChecking=no -l ec2-user ec2-34-229-138-28.compute-1.amazonaws.com uname -a'
                         sh 'ssh ec2-user@ec2-34-229-138-28.compute-1.amazonaws.com "killall node"'
                         sh 'scp -r /var/lib/jenkins/workspace/node-jenkins-pipeline/** ec2-user@ec2-34-229-138-28.compute-1.amazonaws.com:/home/ec2-user/html'
-                        sh 'ssh ec2-user@ec2-34-229-138-28.compute-1.amazonaws.com "cd html && nohup node server.js"'
+                        sh 'ssh -f ec2-user@ec2-34-229-138-28.compute-1.amazonaws.com "cd html && nohup node server.js"'
                     }
                 }
             }
