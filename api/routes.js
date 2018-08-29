@@ -6,5 +6,5 @@
 'use strict';
 
 exports.welcomeAPI = (req, res) => {
-    res.json({ message: 'Hello Project Erwin!' });
+    res.json({ message: 'Deploy Project Erwin!' });
 }
