@@ -6,7 +6,6 @@ pipeline {
             steps {
                 git(url: 'git@github.com:riteshapatel/node-jenkins.git', credentialsId: 'jenkins-ssh-key', branch: 'develop');
                 echo 'git pull success'
-                echo 'workspace ' WORKSPACE
                 dir(WORKSPACE + '/code') {
                     echo 'cleaning node modules...'
                     sh 'rm -Rf node_modules'
