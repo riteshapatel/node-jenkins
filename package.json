@@ -4,6 +4,7 @@
   "description": "Jenkins CI/CD integration for Express API",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "mocha"
   },
   "repository": {
