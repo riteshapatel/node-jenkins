@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                git(url: 'git@github.com:riteshapatel/node-jenkins.git' credentialsId: 'jenkins-ssh-key', branch: 'develop');
+                git(url: 'git@github.com:riteshapatel/node-jenkins.git', credentialsId: 'jenkins-ssh-key', branch: 'develop');
                 echo 'git pull success'
                 dir(WORKSPACE + '/code') {
                     echo 'cleaning node modules...'
