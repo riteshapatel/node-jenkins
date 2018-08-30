@@ -45,7 +45,7 @@ app.use('/users', iam.listUsers);
 
 //create server & listen on port 3000
 http.createServer(app).listen(app.get('port'), function(){
-	console.log('Express Server Running!');
+	console.log('Erwin Server is Running!');
 });
 
 //export app
